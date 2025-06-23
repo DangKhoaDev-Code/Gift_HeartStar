@@ -41,13 +41,20 @@
 
     function createFallingText() {
       const text = messages[Math.floor(Math.random() * messages.length)];
+      const fontSize = Math.random() * 10 + 10;
+
+      ctx.font = `bold ${fontSize}px Pacifico`;
+      const textWidth = ctx.measureText(text).width;
+
+      const x = Math.random() * (width - textWidth); 
+
       fallingTexts.push({
         text,
-        x: Math.random() * width,
+        x,
         y: -10,
         speed: Math.random() * 2 + 2,
         alpha: 1,
-        fontSize: Math.random() * 10 + 10,
+        fontSize,
         hue: Math.random() * 360
       });
     }
