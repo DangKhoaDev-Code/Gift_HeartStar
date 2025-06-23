@@ -45,7 +45,7 @@
         text,
         x: Math.random() * width,
         y: -10,
-        speed: Math.random() * 0.5 + 2,
+        speed: Math.random() * 2 + 2,
         alpha: 1,
         fontSize: Math.random() * 10 + 10,
         hue: Math.random() * 360
@@ -131,7 +131,7 @@
 
     setInterval(() => {
       if (Math.random() < 0.8) createFallingText();
-    }, 1000);
+    }, 2000);
 
 
     function animate() {
