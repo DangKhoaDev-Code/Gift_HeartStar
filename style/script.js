@@ -13,7 +13,6 @@ const messages = [
   "Em là ngôi sao sáng nhất",
   "Anh tỏa sáng là vì em",
   "Em thật tỏa sáng trên bầu trời của anh"
-  "DangKhoa_Dev"
 ];
 const fallingTexts = [];
 
@@ -337,5 +336,6 @@ function handleDevToolsDetection() {
 // Lắng nghe sự kiện thay đổi kích thước và kiểm tra định kỳ
 window.addEventListener('resize', handleDevToolsDetection);
 setInterval(handleDevToolsDetection, 500);
+
 
 
