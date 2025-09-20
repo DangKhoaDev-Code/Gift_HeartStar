@@ -54,14 +54,82 @@
     }
 
 
+body {
+  margin: 0;
+  padding: 0;
+  background: #0b002d;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.cosmic-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #1a0033, #0b002d);
+  z-index: -2;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+
+.message {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 22px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 5px;
+  color: #ddd;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.copyright a {
+  color: #ff99cc;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  color: #ff66cc;
+  text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff66cc;
+}
+
+/* watermark góc dưới bên phải */
 .watermark {
   position: fixed;
-  bottom: 10px;       /* cách mép dưới 10px */
-  right: 15px;        /* cách mép phải 15px */
-  font-family: 'Poppins', sans-serif;
+  bottom: 10px;
+  right: 15px;
   font-size: 14px;
   color: #ffffff;
-  opacity: 0.7;       /* mờ nhẹ */
-  pointer-events: none; /* không bị click */
+  opacity: 0.8;
+  text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease, text-shadow 0.3s ease;
 }
+
+.watermark:hover {
+  color: #ff66cc;
+  opacity: 1;
+  text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff66cc;
+}
+
+
 
